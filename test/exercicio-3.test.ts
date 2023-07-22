@@ -8,12 +8,11 @@ describe('exercicio 3', () => {
 
     // execucao da solução.
     // sut -> system under test.
-    const r = trocaValores(primeiro, segundo);
-    console.log(r);
+    const { maior, menor } = trocaValores(primeiro, segundo);
 
     // validacao da solução.
-    // expect(maior).toEqual(primeiro);
-    // expect(menor).toEqual(segundo);
+    expect(maior).toEqual(primeiro);
+    expect(menor).toEqual(segundo);
   });
 
   it('se o 1o parametro for o menor, ele será retornado no campo "menor"', () => {
