@@ -11,5 +11,19 @@
  * @returns
  */
 export const chunk = (valores: number[], tamanho: number): number[][] => {
-  return null;
+  let chunkAux: number[] = [];
+
+  for (let i = 0; i < valores.length; i++) {
+    chunkAux.push(valores[i]);
+  }
+
+  let spliceAux: number[] = chunkAux;
+  let resultado: number[][] = [];
+
+  while (chunkAux.length != 0) {
+    chunkAux = spliceAux.splice(tamanho);
+    resultado.push(spliceAux);
+    spliceAux = chunkAux;
+  }
+  return resultado;
 };
