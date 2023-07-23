@@ -15,6 +15,5 @@ export const compact = (items: unknown[]): unknown[] => {
       result.push(items[i]);
     }
   }
-  console.log(items);
   return result;
 };
