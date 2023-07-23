@@ -5,5 +5,7 @@
  * @returns o texto enviado por parâmetro, alterado para capitalize.
  */
 export const capitalize = (text: string): string => {
-  return '';
+  text = text.toLowerCase();
+  text = text.replace(text[0], text[0].toUpperCase());
+  return text;
 };
