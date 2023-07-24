@@ -28,13 +28,14 @@ export const group = <T extends Record>(
   key: keyof T,
 ): { [key: string]: T[] } => {
   let result = {};
+  let auxKey: any = key;
 
   for (let i: number = 0; i < collection.length; i++) {
-    if (!result[collection[i].country]) {
-      result[collection[i].country] = [];
-      result[collection[i].country].push(collection[i]);
+    if (!result[collection[i][auxKey.toString()]]) {
+      result[collection[i][auxKey.toString()]] = [];
+      result[collection[i][auxKey.toString()]].push(collection[i]);
     } else {
-      result[collection[i].country].push(collection[i]);
+      result[collection[i][auxKey.toString()]].push(collection[i]);
     }
   }
   return result;
