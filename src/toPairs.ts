@@ -12,5 +12,12 @@ type Record = {
  * @returns
  */
 export const toPairs = (record: Record): KeyAndValue[] => {
-  return null;
+  let result: any = [];
+  let keys: unknown = Object.keys(record);
+  let values: unknown = Object.values(record);
+
+  for (let i: number = 0; i < Object.keys(record).length; i++) {
+    result.push([keys[i], values[i]]);
+  }
+  return result;
 };
