@@ -5,5 +5,10 @@
  * @returns o texto enviado por parâmetro, alterado para kebabCase.
  */
 export const kebabCase = (word: string): string => {
-  return '';
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === ' ' || word[i] === '_' || word[i] === '-') {
+      word = word.replace(word[i], '-');
+    }
+  }
+  return word;
 };
