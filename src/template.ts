@@ -20,5 +20,11 @@ import { Record } from '../types/record';
  * @returns
  */
 export const template = (templateString: string, matchers: Record): string => {
-  return null;
+  let keys: unknown = Object.keys(matchers);
+  let values: unknown = Object.values(matchers);
+
+  templateString = templateString.replace('{{' + keys[0] + '}}', values[0]);
+  templateString = templateString.replace('{{' + keys[1] + '}}', values[1]);
+  templateString = templateString.replace('{{' + keys[2] + '}}', values[2]);
+  return templateString;
 };
