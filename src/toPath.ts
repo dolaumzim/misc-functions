@@ -13,5 +13,10 @@
  * @returns
  */
 export const toPath = (path: string): string[] => {
-  return null;
+  let result: string[] = [];
+
+  path = path.replace(/[\[]/g, '.');
+  path = path.replace(/[\]]/g, '');
+  result = path.split('.');
+  return result;
 };
