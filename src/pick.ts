@@ -15,5 +15,17 @@ export const pick = <T extends Record>(
   record: T,
   ...args: (keyof T)[]
 ): Record => {
-  return null;
+  let result: Record = {};
+  let keys: unknown = Object.keys(record);
+  let values: unknown = Object.values(record);
+
+  for (let arg of args) {
+    let auxArg: any = arg;
+    for (let i: number = 0; i < Object.keys(record).length; i++) {
+      if (auxArg === keys[i]) {
+        result[keys[i]] = values[i];
+      }
+    }
+  }
+  return result;
 };
