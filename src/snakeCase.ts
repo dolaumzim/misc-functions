@@ -5,5 +5,11 @@
  * @returns o texto enviado por parâmetro, alterado para snakeCase.
  */
 export const snakeCase = (word: string): string => {
-  return null;
+  word = word.toLowerCase();
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === ' ' || word[i] === '_' || word[i] === '-') {
+      word = word.replace(word[i], '_');
+    }
+  }
+  return word;
 };
