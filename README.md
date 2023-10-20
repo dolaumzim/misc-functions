@@ -1,8 +1,6 @@
-# Prática Conceitos Básicos do Typescript
+# Funções Básicas Typescript - Armando Assini
 
-Este pacote contém a uma série de funções utilitárias, principalmenete para manipulação de arrays e strings. Nenhuma destas funções estão implementadas, apenas assinadas, anotadas com comentários, que explicam sua função, e com testes de unidade implementados, para garantir a correta implementação dos requisitos.
-
-Você deverá implementar cada uma destas funções, de forma que os testes de unidade sejam executados com sucesso. Para isso, você deverá seguir as instruções abaixo.
+Este projeto se trata de uma série de funções básicas, a serem desenvolvidas com algumas limitações propostas, que serão citadas posteriormente, com intuito de serem funcionais em qualquer ocasião e ainda passarem nos testes propostos neste repositório.
 
 ## Instalação
 
@@ -12,9 +10,9 @@ Todas as bibliotecas necessárias para esta prática já estão adicionadas ao p
 npm install
 ```
 
-## comandos
+## Comandos
 
-Este projeto nasce com alguns comandos uteis para o desenvolvedor. Abaixo, uma breve descrição deles:
+Este projeto nasce com alguns comandos úteis para o desenvolvedor. Abaixo, uma breve descrição deles:
 
 - `build`: comando responsável por transformar o código typescript em javascript, compreensível para o interpretador de node. A princípio, este comando será necessário apenas para o momento da publicação de nosso pacote.
 - `test`: comando utilizado para rodar os testes uma vez apenas. Util também para o momento de publicação deste pacote. 
@@ -28,13 +26,15 @@ Para executar qualquer um destes comandos, basta você executar, no terminal, o 
 
 Este repositório possui dois diretórios principais: 
 - `src`: pasta onde todas as funções deverão estar implementadas
-- `test`: pasta onde se localizam os testes de unidade das funções. Falaremos disso no futuro...
+- `test`: pasta onde se localizam os testes de unidade das funções.
 
-## Sobre a dinâmica
+## Sobre o projeto
 
-Você precisará desenvolver o código para garantir que as funções implementadas funcionem corretamente.
+Foi fornecido um repositório contento uma série de arquivos, cada um com o nome de uma função. Dentro de cada um desses arquivos se encontrava uma breve descrição do funcionamento esperado da dada função. Além disso, também foram fornecidos arquivos de teste individuais, de tal forma que cada função poderia ser testada individualmente.
 
-Como foi dito acima, para cada função, foi criado um teste de unidade, que cobre o principal cenário de uso da função. Você deverá implementar todo o código necessário para que o teste seja executado com sucesso. Por exemplo, quando você implementar a função do método `camelCase`, disponível em `src/cammelCase.ts`, você deverá rodar os testes disponíveis em `test/camelCase.test.ts` através do comando:
+A partir dessas descrições, foram desenvolvidos códigos assegurando o funcionamento de cada uma delas e consequentemente garantindo a resposta correta nos testes propostos.
+
+Para aplicar um teste é necessário utilizar um comando como o seguinte exemplo: Implementada a função do método `camelCase`, disponível em `src/cammelCase.ts`, para rodar os testes disponíveis em `test/camelCase.test.ts` utilize o comando:
 
 ```bash
 npm run test:watch -- test/camelCase.test.ts
@@ -42,54 +42,17 @@ npm run test:watch -- test/camelCase.test.ts
 
 Este comando habilita o modo de execução contínua dos testes, e executa apenas os testes da função `camelCase`. Considere seu método pronto no momento que todos os testes forem executados com sucesso.
 
-### Criando uma cópia do repositório
+Ainda é importante denotar que para esta prática foi vetado o uso de métodos como : forEach, filter, map, reduce, includes, some, every e afins, para focar na utilização e compreensão dos loops básicos.
 
-Você deverá acessar o repositório disponível no grupo principal de materiais para a nossa turma, no gitlab. No topo à direita, você encontrará um botão com a legenda `fork`. Este botão te permitirá criar uma cópia deste repositório, em seu próprio perfil do gitlab.
+## Conclusão
 
-![Botão de fork](./.gitlab/docs/fork.png)
+Ao final do projeto, foram desenvolvidas todas as funções propostas, passando em todos os testes propostos.
+  
+![Passed Tests](https://github.com/dolaumzim/misc-functions/assets/66185784/b6f1262e-0922-4649-aea8-66e9c9596469)
 
-Clicando nele, o gitlab permitirá que você copie este repositório para sua conta. Após este processo, você poderá editar o código deste repositório da forma que você quiser, sem comprometer o código original.
+## Autor
 
-![Criando o fork](./.gitlab/docs/criando-fork.png)
+  - **Armando Assini** - *arm.assini@gmail.com*
 
-Depois disso, basta você clonar o repositório em seu computador e começar trabalhar!
+**Contribuições** - Professores, Monitores e Colegas de classe Turma React2 - Raro Academy.
 
-### Fluxo básico do git
-
-Caso você ainda não entenda a dinâmica básica de trabalho com git, não tem problema. Ainda teremos tempo para aprender seu funcionamento. Mas como você precisará entregar as suas atividades em seu repositório, vamos criar um fluxo básico de trabalho.
-
-O primeiro passo para trabalhar com o git, é instala-lo em seu computador. Para isso, sugiro que você acesse o [site oficial do git](https://git-scm.com/downloads) e faça o download da versão adequada para seu sistema operacional. As instruções oficiais para a configuração necessária você encontrará [aqui](https://git-scm.com/book/pt-pt/v2/Come%C3%A7ando-Configura%C3%A7%C3%A3o-Inicial-do-Git). Caso ainda precise de ajuda, acredito que você não terá dificuldades em encontrar bons materiais na internet ([segue um exemplo](https://www.youtube.com/watch?v=POpFXae0NP0)).
-
-#### Clonando o repositório
-
-Clonar um repositório significa, de forma um pouco grosseira, copiar o conteúdo do gitlab para seu computador. Esta ação permitirá que você trabalhe em seu código, e depois envie as alterações de volta para o gitlab.
-
-![Opções de clone](./.gitlab/docs/opcoes-clone.png)
-
-O gitlab permite que você clone o repositório de diversas formas. Recomendo sempre que você utilize as opções de clone via terminal. Mas se você preferir, é possível também clonar o repositório via interface gráfica com seu editor de texto (nunca utilizei, mas acredito que funciona bem).
-
-Seja qual opção você adotar, será necessário que você faça a configuração de sua chave ssh no gitlab, ou que você configure um token para acessar o repositório via https. O processo para ambas está documentado [aqui](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html). Se você estiver em dúvidas, acredito que via ssh seja a mais cômoda :).
-
-#### Fluxo de trabalho
-
-Você deverá implementar os exercícios um por vez. Cada vez que você encerrar o trabalho, você deverá submeter este novo código ao gitlab. Para isso, basta abrir seu terminal, na pasta deste projeto, e executar os comandos:
-
-```sh
-git add .
-git commit -m 'mensagem super breve para explicar o que você fez'
-git push origin main
-```
-
-Ainda aprenderemos detalhes sobre o fluxo do git. De forma geral, as instruções dadas acima são muito simplificadas, em relação ao que você deverá fazer na prática profissional. Mas por hora, elas serão suficientes para que você consiga entregar suas atividades.
-
-
-## Dicas
-
-Como foi dito acima, todas as funções possuem testes implementados. Esta modalidade de testes será explicada nas próximas aulas, mas já podemos fazer bom uso deles. Para que você implemente seu método da forma mais fácil possível, sugiro que siga o passo-a-passo abaixo:
-
-- baixar o pacote;
-- executar o comando de instalação dos pacotes do projeto (`npm install`);
-- colocar os testes em execução, com o comando `npm run test:watch <caminho-do-arquivo-de-tetes>`;
-  - ex.: para rodar apenas os testes da função `camelCase`, usar o comando `npm run test:watch test/camelCase.test.ts`
-- os testes deverão estar quebrados. Não se preocupe, este é o esperado.
-- você deverá agora escrever sua função (no mesmo exemplo, alterar o arquivo `src/camelCase.ts`), e implementar o código, de forma que seu teste funcione corretamente.
