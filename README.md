@@ -40,7 +40,13 @@ Para aplicar um teste é necessário utilizar um comando como o seguinte exemplo
 npm run test:watch -- test/camelCase.test.ts
 ```
 
-Este comando habilita o modo de execução contínua dos testes, e executa apenas os testes da função `camelCase`. Considere seu método pronto no momento que todos os testes forem executados com sucesso.
+Este comando habilita o modo de execução contínua dos testes, e executa apenas os testes da função `camelCase`. Os métodos foram considerados prontos no momento que todos os testes foram executados com sucesso.
+
+Para executar o teste de todas as funções basta utilizar o comando test sem nenhum argumento:
+
+```bash
+npm run test
+```
 
 Ainda é importante denotar que para esta prática foi vetado o uso de métodos como : forEach, filter, map, reduce, includes, some, every e afins, para focar na utilização e compreensão dos loops básicos.
 
